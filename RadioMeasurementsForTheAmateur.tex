@@ -201,11 +201,102 @@ blah
 bluh
 \section{Crystal Parameters}
 %lots of choises here
+
+\subsection*{Overview method 1}
+This method of measuring crystal parameters utilize the fact that a crystal have both a series resonance and a parallel resonance. The frequency of these are measured and the crystal parameters are then calculated. This (should) gives an improved accuracy compared to simpler methods. 
+\subsection*{Equipment List}
+\begin{itemize}
+	\item RF Signal Generator, DDS or synthesized with 1Hz tuning step.
+	\item Crystal measurement jig as described under DIY equipment.
+	\item RF RMS Voltmeter or power meter(preferably with dB scale, HP3400 or HP432 recomended.) 
+\end{itemize}
+
+\subsection*{Test Setup}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{Illustrations/MDSSetup}
+\caption{IF Rejection Setup}
+\end{figure}}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually N Male-to-N Male
+	\item 1 --- Adapter \\
+		Varies depending on the connectors on your generator and meter.
+	
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+\item connect the signal generator to the series jig.
+\item connect the RF RMS voltmeter or power meter to the series jig.
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+\item Set signal generator to 0dBm ( 1mW). Most crystals will get damaged at higher power levels.
+\item connect a wire, as short as possible over the crystal connections, and note the meter reading. This is your 0dB level. For the short, one can also use the shunt jig without any wire connected. 
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+\item  measure series resonance freq in series jig
+\item measure parallel resonance freq. in shunt jig
+\do some math on the data, flush and repeat.. 
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+\item An automated test for this can be done with computer controlled equipment, and the crystal parameters can then be calculated automatic.
+\end{itemize}
+
+
+
+
+
 \section{Third-Order Intercept}
 \section{Noise Figure}
 % this depeends opon what equipment are avaible and what component to be measured, could be its own chapter.
+\subsection*{Overview method 1}
+%things
+\subsection*{Equipment List}
+\begin{itemize}
+	\item items
+\end{itemize}
+\subsection*{Test Setup}
+\begin{figure}
+\centering
+\includegraphics[scale=1]{Illustrations/MDSSetup}
+\caption{IF Rejection Setup}
+\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+\item  
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+\item
+\end{itemize}
+
+
 \section{Resonator Q}
 % here there are several metthods, we should probably describe them all, as not all are suitable for all components
 \chapter{DIY Test Equipment}
+\section{crystal measurement jig}
+Cut 2 traces in a PCB (or order it from OSHpark: https://oshpark.com/shared_projects/Ert6eRmg ) then fit 2 pices of an IC socket to it so you keep the 50 ohm environement but it allows for measurment of crystals. Use good sockets, goldplated prefered.  
+\section{Noise Figure stuff}
 blah
 \end{document}
