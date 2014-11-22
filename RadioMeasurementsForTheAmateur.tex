@@ -57,7 +57,7 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 \subsubsection*{Required Cabling}
 \begin{itemize}
 	\item 2 --- 50 $\Omega$ jumper cables \\
-		Usually BNC Male-to-BNC Male
+		Usually coaxial cables (such as RG-58) with BNC Male-to-BNC Male connectors
 	\item 1 --- audio jumper cable \\
 		Varies depending on the connectors on your receiver and AF amplifier or load
 	\item 1 --- set of voltage probe test leads \\
@@ -84,11 +84,11 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 	\item Turn ON the signal generator output. You should hear a CW tone from the AF amplifier.
 	\item Fine-tune the tune control of the DUT (receiver) until the CW tone is centered in the passband and is at maximum level.
 	\item Turn OFF the signal generator output.
-	\item 4. Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading. \\ \\ \\
+	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading. \\ \\ \\
 	AF Noise Power $\rule{3cm}{0.1mm}$
 	\item The MDS level will be the AF power level 3 dB higher than the measurement made in the previous step. Calculate it below. \\ \\ \\
 	AF Noise + MDS Signal Power $\rule{3cm}{0.1mm}$
-	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 5 (if you are using an external AF amplifier, you may need to turn down its gain control). Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 5. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your MDS figure. \\ \\ \\
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 5 (if you are using an external AF amplifier, you may need to turn down its gain control). Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in previous step. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your MDS figure. \\ \\ \\
 	MDS $\rule{3cm}{0.1mm}$
 \end{enumerate}
 \emph{For example, if your signal generator is set to -50 dBm and the step attenuator is set to 81 dB, then your MDS is -131 dBm.}
@@ -104,14 +104,14 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 \section{Noise Figure}
 \section{Audio Frequency Response}
 \section{Audio Power Output}
-\chapter*{Transmitter Measurements}
+\chapter{Transmitter Measurements}
 blah
 \section{Transmitter Power Output}
 \section{Transmitter Spectral Purity}
 \section{Transmitter Carrier and Unwanted Sideband Suppression}
 \section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
 \section{Transmitter CW Keying Waveform}
-\chapter*{Components and Circuits}
+\chapter{Components and Circuits}
 \section{Crystal Parameters}
 \section{Third-Order Intercept}
 \section{Noise Figure}
