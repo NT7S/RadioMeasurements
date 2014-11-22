@@ -248,7 +248,11 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \item measure parallel resonance freq. in shunt jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your parallel frequency F_{P}. \\ \\ \\
 	F_{P} : $\rule{3cm}{0.1mm}$ Hz.
 \item do some math on the data, flush and repeat.. 
+\item The crystal motional series capacitor C_{m} is found by calculation: $ C_{m} = C_{p}\cdot\frac{F_{p}^{2}-F_{s}^{2}}{F_{s}^{2}} $
+\item then the inductance can be found: $ L_{m} = \dfrac{1}{c_{p}\cdot 4 \cdot \pi^{2} \cdot F_{p}^{2}-F_{s}^{2} } $
+\item The Q factor of the crystal can then be found: $ Q = \frac{L_{m}\cdot 2 \cdot \pi \cdot F_{s}}{R_{s}}   $
 
+\item With these calculations done, the crystal parameters are characteriszed. The accuracy of the frequency measurment is what defines the accuracy of this method. 
 
 \end{enumerate}
 
