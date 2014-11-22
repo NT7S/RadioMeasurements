@@ -5,7 +5,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\author{Jason Milldrum, NT7S.\ Thomas S. Knutsen, LA3PNA} %LaTeX don't like several authors afaik.
+\author{Jason Milldrum, NT7S.} %LaTeX don't like several authors afaik.
 
 \title{Radio Measurements For The Amateur}
 
@@ -19,7 +19,7 @@
 {\noindent\Huge\bfseries Radio Measurements for the Amateur}\\[2\baselineskip] % Title
 {\large \textit{\today}}\\[4\baselineskip] % Tagline or further description
 {\Large \textsc{Jason Milldrum, NT7S}} % Author name
-{\Large \textsc{Thomas S. Knutsen, LA3PNA}}
+{\Large \textsc{Thomas S. Knutsen, LA3PNA}} % 2. Author name
 
 \vspace{0.6\textheight} % Whitespace between the title block and the publisher
 {\noindent Etherkit}\\[\baselineskip] % Publisher
@@ -209,6 +209,7 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 	\item RF Signal Generator, DDS or synthesized with 1Hz tuning step.
 	\item Crystal measurement jig as described under DIY equipment.
 	\item RF RMS Voltmeter or power meter(preferably with dB scale, HP3400 or HP432 recomended.) 
+	\item 100$\Omega$ non inductive trim potentiometer
 \end{itemize}
 
 \subsection*{Test Setup}
@@ -234,13 +235,21 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \subsubsection*{Presets}
 \begin{itemize}
 \item Set signal generator to 0dBm ( 1mW). Most crystals will get damaged at higher power levels.
-\item connect a wire, as short as possible over the crystal connections, and note the meter reading. This is your 0dB level. For the short, one can also use the shunt jig without any wire connected. 
+\item connect a wire, as short as possible over the crystal connections, and note the meter reading. This is your 0dB level. For the short, one can also use the shunt jig without any wire connected. \\ \\ \\
+	 Calibration level: $\rule{3cm}{0.1mm}$ 
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-\item  measure series resonance freq in series jig
-\item measure parallel resonance freq. in shunt jig
-\do some math on the data, flush and repeat.. 
+\item Measure the parasitic package capacitance of the crystal. This should be done on a frequency far away from the crystal frequency, most meters measure this in the 100KHz range. 
+\item  measure series resonance freq in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency F_{S}.  \\ \\ \\
+	F_{S : $\rule{3cm}{0.1mm}$ Hz.
+\item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\\ \\ \\
+	R_{S} : $\rule{3cm}{0.1mm}$ $\Omega$. % this resistance can be calculated as well, I just need to derive that exact math, its somthing like (Z0/2 * dB/1-dbcal)
+\item measure parallel resonance freq. in shunt jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your parallel frequency F_{P}. \\ \\ \\
+	F_{P} : $\rule{3cm}{0.1mm}$ Hz.
+\item do some math on the data, flush and repeat.. 
+
+
 \end{enumerate}
 
 \subsection*{Hints and Tips}
