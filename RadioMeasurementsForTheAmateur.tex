@@ -101,7 +101,7 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 
 
 
-
+\newpage
 
 \section{IF Rejection}
 
@@ -215,8 +215,8 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \subsection*{Test Setup}
 \begin{figure}
 \centering
-\includegraphics[scale=1]{Illustrations/MDSSetup}
-\caption{IF Rejection Setup}
+\includegraphics[scale=1]{Illustrations/crystals}
+\caption{Crystal parameter measurment}
 \end{figure}}
 \subsubsection*{Required Cabling}
 \begin{itemize}
@@ -243,22 +243,23 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \item Measure the parasitic package capacitance of the crystal. This should be done on a frequency far away from the crystal frequency, most meters measure this in the 100KHz range. 
 \item  measure series resonance freq in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency F_{S}.  \\ \\ \\
 	F_{S : $\rule{3cm}{0.1mm}$ Hz.
+	
 \item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\\ \\ \\
-	R_{S} : $\rule{3cm}{0.1mm}$ $\Omega$. % this resistance can be calculated as well, I just need to derive that exact math, its somthing like (Z0/2 * dB/1-dbcal)
+	R_{S} : $\rule{3cm}{0.1mm}$ $\Omega$. % this resistance can be calculated as well, I just need to derive that exact math, its something like (Z0/2 * dB/1-dbcal)
 \item measure parallel resonance freq. in shunt jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your parallel frequency F_{P}. \\ \\ \\
 	F_{P} : $\rule{3cm}{0.1mm}$ Hz.
 \item do some math on the data, flush and repeat.. 
-\item The crystal motional series capacitor C_{m} is found by calculation: $ C_{m} = C_{p}\cdot\frac{F_{p}^{2}-F_{s}^{2}}{F_{s}^{2}} $
+\item The crystal motional series capacitor $C_{m}$ is found by calculation: \\ $ C_{m} = C_{p}\cdot\frac{F_{p}^{2}-F_{s}^{2}}{F_{s}^{2}} $
 \item then the inductance can be found: $ L_{m} = \dfrac{1}{c_{p}\cdot 4 \cdot \pi^{2} \cdot F_{p}^{2}-F_{s}^{2} } $
 \item The Q factor of the crystal can then be found: $ Q = \frac{L_{m}\cdot 2 \cdot \pi \cdot F_{s}}{R_{s}}   $
 
-\item With these calculations done, the crystal parameters are characteriszed. The accuracy of the frequency measurment is what defines the accuracy of this method. 
+\item With these calculations done, the crystal parameters are characterized. The accuracy of the frequency measurement is what defines the accuracy of this method. 
 
 \end{enumerate}
 
 \subsection*{Hints and Tips}
 \begin{itemize}
-\item An automated test for this can be done with computer controlled equipment, and the crystal parameters can then be calculated automatic.
+\item An automated test for this can be done with computer controlled equipment, and the crystal parameters can then be calculated automatic. This is the method most network analyzers use for characterizing crystals.
 \end{itemize}
 
 
@@ -309,7 +310,12 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 % here there are several metthods, we should probably describe them all, as not all are suitable for all components
 \chapter{DIY Test Equipment}
 \section{crystal measurement jig}
-Cut 2 traces in a PCB (or order it from OSHpark: https://oshpark.com/shared_projects/Ert6eRmg ) then fit 2 pices of an IC socket to it so you keep the 50 ohm environement but it allows for measurment of crystals. Use good sockets, goldplated prefered.  
+\begin{itemize}
+\item Cut 2 traces in a PCB (or order it from OSHpark: https://oshpark.com/shared_projects/Ert6eRmg )
+
+\item  Fit 2 pices of an IC socket to it so you keep the 50 ohm environement but it allows for measurment of crystals.
+\item Use good sockets, goldplated prefered.  
+\end{itemize}
 \section{Noise Figure stuff}
 blah
 \end{document}
