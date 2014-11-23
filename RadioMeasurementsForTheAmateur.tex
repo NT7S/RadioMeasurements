@@ -302,8 +302,11 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \item  measure series resonance freq in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency F_{S}.  \vspace{30pt} \vspace{30pt} \vspace{30pt}
 	F_{S : $\rule{3cm}{0.1mm}$ Hz.
 	
-\item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\vspace{30pt} \vspace{30pt} \vspace{30pt}
-	R_{S} : $\rule{3cm}{0.1mm}$ $\Omega$. % this resistance can be calculated as well, I just need to derive that exact math, its something like (Z0/2 * dB/1-dbcal)
+%\item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\vspace{30pt} \vspace{30pt} \vspace{30pt}
+\item Note the amplitude of the meter. This amplitude is proportional to the internal resistance in your crystal. Calculate the dB loss, this should be a negative value.: $ dB = crystal loss (dB) - reference level (dB) $ \vspace{30pt}
+\item Calculate the internal resistance of the crystal: $ R_{s} = 100\cdot((10^{\frac{dB}{20}})^{-1}-1) $ \vspace{30pt}
+
+	R_{S} : $\rule{3cm}{0.1mm}$ $\Omega$. 
 \item measure parallel resonance freq. in shunt jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your parallel frequency F_{P}. \vspace{30pt} \vspace{30pt} \vspace{30pt}
 	F_{P} : $\rule{3cm}{0.1mm}$ Hz.
 \item do some math on the data, flush and repeat.. 
