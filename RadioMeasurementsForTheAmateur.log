@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  22 NOV 2014 09:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  22 NOV 2014 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,37 +478,7 @@ File: Illustrations/MDSSetup-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Illustrations/MDSSetup-eps-converted-to.pdf used on in
 put line 56.
 (pdftex.def)             Requested size: 319.19171pt x 114.42722pt.
- [9] [10 <./Illustrations/MDSSetup-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
-
- []
-
-[11]
+ [9] [10 <./Illustrations/MDSSetup-eps-converted-to.pdf>] [11]
 Package epstopdf Info: Source file: <Illustrations/MDSSetup.eps>
 (epstopdf)                    date: 2014-11-21 13:03:14
 (epstopdf)                    size: 52246 bytes
@@ -518,82 +488,18 @@ f>
 (epstopdf)                    size: 16641 bytes
 (epstopdf)             Command: <repstopdf --outfile=Illustrations/MDSSetup-eps
 -converted-to.pdf Illustrations/MDSSetup.eps>
-(epstopdf)             \includegraphics on input line 120.
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 File: Illustrations/MDSSetup-eps-converted-to.pdf Graphic file (type pdf)
- <use Illustrations/MDSSetup-eps-converted-to.pdf>
+
+<use Illustrations/MDSSetup-eps-converted-to.pdf>
 Package pdftex.def Info: Illustrations/MDSSetup-eps-converted-to.pdf used on in
-put line 120.
+put line 123.
 (pdftex.def)             Requested size: 319.19171pt x 114.42722pt.
- [12]
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
-
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
-
- []
-
-[14] [15] [16
+ [12] [13] [14] [15] [16
 
 ]
 Chapter 5.
-
-Overfull \hbox (4.03122pt too wide) in paragraph at lines 196--196
-[]\OT1/cmr/bx/n/14.4 Transmitter Car-rier and Un-wanted Side-band
- []
-
-
-Overfull \hbox (1.45457pt too wide) in paragraph at lines 197--197
-[]\OT1/cmr/bx/n/14.4 Transmitter Two-Tone In-ter-mod-u-la-tion Dis-
- []
-
 [17] [18
 
 ]
@@ -606,11 +512,11 @@ Chapter 7.
 Here is how much of TeX's memory you used:
  2636 strings out of 493304
  34084 string characters out of 6139870
- 95559 words of memory out of 5000000
+ 94559 words of memory out of 5000000
  6038 multiletter control sequences out of 15000+600000
  9416 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,6n,24p,622b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,24p,613b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
@@ -620,7 +526,7 @@ s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on RadioMeasurementsForTheAmateur.pdf (21 pages, 150162 bytes).
+Output written on RadioMeasurementsForTheAmateur.pdf (21 pages, 150149 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream

@@ -86,12 +86,15 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 	\item Turn ON the signal generator output. You should hear a CW tone from the AF amplifier.
 	\item Fine-tune the tune control of the DUT (receiver) until the CW tone is centered in the passband and is at maximum level.
 	\item Turn OFF the signal generator output.
-	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading. \\ \\ \\
-	AF Noise Power $\rule{3cm}{0.1mm}$
-	\item The MDS level will be the AF power level 3 dB higher than the measurement made in the previous step. Calculate it below. \\ \\ \\
-	AF Noise + MDS Signal Power $\rule{3cm}{0.1mm}$
-	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 5 (if you are using an external AF amplifier, you may need to turn down its gain control). Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in previous step. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your MDS figure. \\ \\ \\
-	MDS $\rule{3cm}{0.1mm}$
+	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading.
+	\vspace{30pt}
+	\\AF Noise Power $\rule{3cm}{0.1mm}$
+	\item The MDS level will be the AF power level 3 dB higher than the measurement made in the previous step. Calculate it below.
+	\vspace{30pt}
+	\\AF Noise + MDS Signal Power $\rule{3cm}{0.1mm}$
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 5 (if you are using an external AF amplifier, you may need to turn down its gain control). Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in previous step. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your MDS figure.
+	\vspace{30pt}	
+	\\MDS $\rule{3cm}{0.1mm}$
 \end{enumerate}
 \emph{For example, if your signal generator is set to -50 dBm and the step attenuator is set to 81 dB, then your MDS is -131 dBm.}
 \subsection*{Hints and Tips}
@@ -115,7 +118,7 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 	\item AF Monitor Amplifier or 8 $\Omega$ Resistive Load
 \end{itemize}
 \subsection*{Test Setup}
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=1]{Illustrations/MDSSetup}
 \caption{IF Rejection Setup}
@@ -148,23 +151,27 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item Turn ON the signal generator output and reduce the attenuation. You should hear a CW tone from the AF amplifier. Adjust the frequency so the tone is sentered in the receiver's passband. \\ \\ \\
-	IF center frequency $\rule{3cm}{0.1mm}$ MHz.
+	\item Turn ON the signal generator output and reduce the attenuation. You should hear a CW tone from the AF amplifier. Adjust the frequency so the tone is sentered in the receiver's passband.
+	\vspace{30pt}
+	\\IF center frequency $\rule{3cm}{0.1mm}$ MHz.
 
 	\item Turn OFF the signal generator output.
 
-	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading. \\ \\ \\
-	AF noise power $\rule{3cm}{0.1mm}$ 
+	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading.
+	\vspace{30pt}
+	\\AF noise power $\rule{3cm}{0.1mm}$ 
 
-	\item 4. The IF rejection power level will be the AF power level 3 dB higher than the measurement made in step 4. Calculate it below.\\ \\ \\
+	\item 4. The IF rejection power level will be the AF power level 3 dB higher than the measurement made in step 4. Calculate it below.
+	\vspace{30pt}
+	\\AF Noise + IF rejection power level $\rule{3cm}{0.1mm}$ 
 
-AF Noise + IF rejection power level $\rule{3cm}{0.1mm}$ 
-
-	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your IF rejection power level in dBm.\\ \\ \\
-	 IF rejection power: $\rule{3cm}{0.1mm}$ dBm.
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your IF rejection power level in dBm.
+	\vspace{30pt}
+	\\IF rejection power: $\rule{3cm}{0.1mm}$ dBm.
 	 
-	\item 6. The total IF rejection is now calculated by subtracting the IF rejection power level from the MDS of the receiver. \\ \\ \\
-	 IF rejection: $\rule{3cm}{0.1mm}$ dB.
+	\item 6. The total IF rejection is now calculated by subtracting the IF rejection power level from the MDS of the receiver.
+	\vspace{30pt}
+	 \\IF rejection: $\rule{3cm}{0.1mm}$ dB.
 
 
 	\emph{For example, if your signal generator is set to 0 dBm and the step attenuator is set to 43 dB, then your IF rejection power level is -43dBm. With an receiver MDS of -131dBm the IF rejection will then be: -43dbm -(-131dBm)=88dB.}
@@ -193,8 +200,8 @@ AF Noise + IF rejection power level $\rule{3cm}{0.1mm}$
 blah
 \section{Transmitter Power Output}
 \section{Transmitter Spectral Purity}
-\section{Transmitter Carrier and Unwanted Sideband Suppression}
-\section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
+\section{Transmitter Carrier \\ and Unwanted Sideband Suppression}
+\section{Transmitter Two-Tone \\ Intermodulation Distortion (IMD)}
 \section{Transmitter CW Keying Waveform}
 \chapter{Components and Circuits}
 
