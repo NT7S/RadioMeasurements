@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  23 NOV 2014 11:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  23 NOV 2014 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,16 +626,12 @@ Package epstopdf Info: Source file: <Illustrations/NFSetup.eps>
 (epstopdf)                    size: 49910 bytes
 (epstopdf)             Output file: <Illustrations/NFSetup-eps-converted-to.pdf
 >
+(epstopdf)                    date: 2014-11-23 11:48:03
+(epstopdf)                    size: 15885 bytes
 (epstopdf)             Command: <repstopdf --outfile=Illustrations/NFSetup-eps-
 converted-to.pdf Illustrations/NFSetup.eps>
 (epstopdf)             \includegraphics on input line 202.
-runsystem(repstopdf --outfile=Illustrations/NFSetup-eps-converted-to.pdf Illust
-rations/NFSetup.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <Illustrations/NFSetup-eps-converted-to.pdf
->
-(epstopdf)                    date: 2014-11-23 11:48:03
-(epstopdf)                    size: 15885 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <Illustrations/NFSetup-eps-converted-to.pdf, id=222, 232.87pt x 114.4275pt>
 File: Illustrations/NFSetup-eps-converted-to.pdf Graphic file (type pdf)
@@ -711,7 +707,7 @@ sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on RadioMeasurementsForTheAmateur.pdf (25 pages, 237810 bytes).
+Output written on RadioMeasurementsForTheAmateur.pdf (25 pages, 237812 bytes).
 PDF statistics:
  399 PDF objects out of 1000 (max. 8388607)
  347 compressed objects within 4 object streams
