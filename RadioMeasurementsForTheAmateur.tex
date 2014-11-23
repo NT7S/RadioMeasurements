@@ -5,7 +5,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\author{Jason Milldrum, NT7S.\ Thomas S. Knutsen, LA3PNA} %LaTeX don't like several authors afaik.
+\usepackage{hyperref}
+\author{Jason Milldrum, NT7S.} %LaTeX don't like several authors afaik.
 
 \title{Radio Measurements For The Amateur}
 
@@ -20,9 +21,8 @@
 {\large \textit{\today}}\\[4\baselineskip] % Tagline or further description
 {\Large \textsc{Jason Milldrum, NT7S}}\\ % Author name
 {\Large \textsc{Thomas S. Knutsen, LA3PNA}}
-
 \vspace{0.6\textheight} % Whitespace between the title block and the publisher
-{\noindent Etherkit}\\[\baselineskip] % Publisher
+\\{\noindent Etherkit}\\[\baselineskip] % Publisher
 {\noindent https://github.com/NT7S/RadioMeasurements}\\[\baselineskip] % Publisher
 }}
 \endgroup}
@@ -62,7 +62,7 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 		Usually coaxial cables (such as RG-58) with BNC Male-to-BNC Male connectors
 	\item 1 --- audio jumper cable \\
 		Varies depending on the connectors on your receiver and AF amplifier or load
-	\item 1 --- set of voltage probe test leads \\
+	\item 1 --- set of voltage probe test leads \vspace{30pt}
 		Your choice of connector for measuring AC RMS voltage output
 \end{itemize}
 \subsubsection*{Connections}
@@ -104,7 +104,7 @@ The purpose of this test is to measure the lowest-level CW signal which can be d
 
 
 
-
+\newpage
 
 \section{IF Rejection}
 
@@ -173,7 +173,6 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 	\vspace{30pt}
 	 \\IF rejection: $\rule{3cm}{0.1mm}$ dB.
 
-
 	\emph{For example, if your signal generator is set to 0 dBm and the step attenuator is set to 43 dB, then your IF rejection power level is -43dBm. With an receiver MDS of -131dBm the IF rejection will then be: -43dbm -(-131dBm)=88dB.}
 \end{enumerate}
 
@@ -184,34 +183,195 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 	\item The IF rejection is the product of the mixer balance and the filter attenuation. Improving the mixer balance will improve the IF rejection.
 \end{itemize}
 
-
-
-
-
 \section{Image Rejection}
 \section{Opposite Sideband Rejection}
 \section{Two-Tone Third Order Dynamic Range}
 \section{Blocking Gain Compression}
 \section{Noise Figure}
 %This is quite easy to do, will make the text later
+Noise figure measurement have the advantage of it being independent on the bandwidth of the receiver. The MDS can then be calculated from the bandwidth of the receiver.
+\subsection*{Equipment List}
+\begin{itemize}
+	\item Noise source with known output noise (ENR).
+	\item AC RMS Voltmeter (preferably with dB scale)
+	\item AF Monitor Amplifier or 8 $\Omega$ Resistive Load
+\end{itemize}
+\subsection*{Test Setup}
+%\begin{figure}
+%\centering
+%\includegraphics[scale=1]{Illustrations/noisefigure}
+%\caption{Noise figure Setup}
+%\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+		\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+	\item 1 --- audio jumper cable \\
+		Varies depending on the connectors on your receiver and AF amplifier or load
+	\item 1 --- set of voltage probe test leads \\
+		Your choice of connector for measuring AC RMS voltage output
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+\item Connect the noise source to the receiver input, avoid using excessive coax cables and adapters if possible.
+\item Connect the other port of the step attenuator to the DUT (receiver) using a 50 $\Omega$ jumper cable.
+	\item Connect the audio output of the DUT (receiver) to the AF amplifier or 8 $\Omega$ load using an audio jumper cable.
+	\item Connect the AC RMS voltmeter probes to the properly loaded audio output of the DUT (receiver).
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+	\item Turn OFF the noise source.
+	\item Turn ON the AF amplifier.
+	\item Turn ON the DUT (receiver) and set for the desired measurement band and frequency. Set the AF gain (volume) control fully-counterclockwise (no AF output), then set to an appropriate level for normal listening. If your receiver has AGC, disable it.
+	\item Turn ON the AC RMS voltmeter. Set the meter scale as necessary
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+\item  Record the amplitude in dB of the noise from the receiver with the noise source off.
+	\vspace{30pt}
+	\\AF noise power $\rule{3cm}{0.1mm}$ dB/mV.
+	\item Turn on the noise source and let the output stabilize.
+	\item Record the amplitude in dB of the noise from the receiver with the noise source on.
+	\vspace{30pt}
+	\\AF noise power $\rule{3cm}{0.1mm}$ dB/mV.
+	\item The ratio of the noise with the noise source on to off is the Y factor. If the measurements of the noise are in dB, the Y factor is: $ Y(dB) = dB(on) - dB(off)$ If the measurement of the noise are in mV then the Y factor is: $ Y = \frac{on(mV)}{off(mV)} $
+\item For the noise figure calculation in dB the noise figure is: $NF(dB) =  ENR(dB) - Y(dB) $
+	\item For the noise figure calculations, the calculation is different if the measurements are done in dB or in Volt. This is due to how multiplications are done with logarithms.
+	\item for mV:  $ f = \dfrac{ENR}{Y-1} $ usualy we give noise figure in dB, so in this case: $ NF = 20 \cdot \log(f) $
+	\item from the noise figure, the MDS can be calculated: $ MDS(dBm) = -174dBm + 10 \log(BW) + NF $ 
+\end{enumerate}
+
 \section{Audio Frequency Response}
 \section{Audio Power Output}
 \chapter{Transmitter Measurements}
 blah
 \section{Transmitter Power Output}
 \section{Transmitter Spectral Purity}
-\section{Transmitter Carrier \\ and Unwanted Sideband Suppression}
-\section{Transmitter Two-Tone \\ Intermodulation Distortion (IMD)}
+\section{Transmitter Carrier and Unwanted Sideband Suppression}
+\section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
 \section{Transmitter CW Keying Waveform}
 \chapter{Components and Circuits}
 
 \section{Crystal Parameters}
 %lots of choises here
+
+\subsection*{Overview method 1}
+This method of measuring crystal parameters utilize the fact that a crystal have both a series resonance and a parallel resonance. The frequency of these are measured and the crystal parameters are then calculated. This (should) gives an improved accuracy compared to simpler methods. 
+\subsection*{Equipment List}
+\begin{itemize}
+	\item RF Signal Generator, DDS or synthesized with 1Hz tuning step.
+	\item Crystal measurement jig as described under DIY equipment.
+	\item RF RMS Voltmeter or power meter(preferably with dB scale, HP3400 or HP432 recommended.) 
+	\item 100$\Omega$ non inductive trim potentiometer
+\end{itemize}
+
+\subsection*{Test Setup}
+%\begin{figure}
+%\includegraphics[scale=1]{Illustrations/crystals}
+%\caption{Crystal Parameter Measurement}
+%\end{figure}}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually N Male-to-N Male
+	\item 1 --- Adapter \\
+		Varies depending on the connectors on your generator and meter.
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+\item connect the signal generator to the series jig.
+\item connect the RF RMS voltmeter or power meter to the series jig.
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+\item Set signal generator to 0dBm ( 1mW). Most crystals will get damaged at higher power levels.
+\item connect a wire, as short as possible over the crystal connections, and note the meter reading. This is your 0dB level. For the short, one can also use the shunt jig without any wire connected.
+	\vspace{30pt}
+	 \\Calibration level: $\rule{3cm}{0.1mm}$ 
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+	\item Measure the parasitic package capacitance of the crystal. This should be done on a frequency far away from the crystal frequency, most meters measure this in the 100 kHz range. 
+	\item  measure series resonance freq in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency $F_{s}$.
+	\vspace{30pt}
+	\\$F_{s}$: $\rule{3cm}{0.1mm}$ Hz.
+	
+%\item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\vspace{30pt} \vspace{30pt} \vspace{30pt}
+\item Note the amplitude of the meter. This amplitude is proportional to the internal resistance in your crystal. Calculate the dB loss, this should be a negative value.: $ dB = crystal loss (dB) - reference level (dB) $\\
+	\item Calculate the internal resistance of the crystal: $ R_{s} = 100\cdot((10^{\frac{dB}{20}})^{-1}-1) $
+	\vspace{30pt}
+	\\$R_{s}$: $\rule{3cm}{0.1mm}$ $\Omega$. 
+\item measure parallel resonance freq. in shunt jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your parallel frequency $F_{p}$.
+	\vspace{30pt} 
+	\\$F_{p}$: $\rule{3cm}{0.1mm}$ Hz.
+\item do some math on the data, flush and repeat.. 
+\item The crystal motional series capacitor $C_{m}$ is found by calculation: \\ $ C_{m} = C_{p}\cdot\frac{F_{p}^{2}-F_{s}^{2}}{F_{s}^{2}} $
+\item then the inductance can be found: $ L_{m} = \dfrac{1}{c_{p}\cdot 4 \cdot \pi^{2} \cdot F_{p}^{2}-F_{s}^{2} } $
+\item The Q factor of the crystal can then be found: $ Q = \frac{L_{m}\cdot 2 \cdot \pi \cdot F_{s}}{R_{s}}   $
+
+\item With these calculations done, the crystal parameters are characterized. The accuracy of the frequency measurement is what defines the accuracy of this method. 
+
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+\item An automated test for this can be done with computer controlled equipment, and the crystal parameters can then be calculated automatic. This is the method most network analyzers use for characterizing crystals.
+\end{itemize}
+
+
+
+
+
 \section{Third-Order Intercept}
 \section{Noise Figure}
 % this depeends opon what equipment are avaible and what component to be measured, could be its own chapter.
+\subsection*{Overview method 1}
+%things
+\subsection*{Equipment List}
+\begin{itemize}
+	\item items
+\end{itemize}
+\subsection*{Test Setup}
+%\begin{figure}
+%\includegraphics[scale=1]{Illustrations/noisefigure}
+%\caption{Noise figure Setup}
+%\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+	\item  
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+	\item
+\end{itemize}
+
+
 \section{Resonator Q}
 % here there are several metthods, we should probably describe them all, as not all are suitable for all components
 \chapter{DIY Test Equipment}
+\section{Crystal Measurement Jig}
+\begin{itemize}
+	\item Cut 2 traces in a PCB (or order it from OSHpark: \url{https://oshpark.com/shared_projects/Ert6eRmg})
+	\item  Fit 2 pieces of an IC socket to it so you keep the 50 ohm environment but it allows for measurement of crystals.
+	\item Use good sockets, gold-plated preferred.  
+\end{itemize}
+\section{Noise Figure stuff}
 blah
 \end{document}
