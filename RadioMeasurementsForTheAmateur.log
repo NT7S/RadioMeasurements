@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  23 NOV 2014 09:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.21)  24 NOV 2014 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,14 +620,39 @@ File: Illustrations/MDSSetup-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Illustrations/MDSSetup-eps-converted-to.pdf used on in
 put line 123.
 (pdftex.def)             Requested size: 319.19171pt x 114.42722pt.
- [13] [14] [15] [16]
-Overfull \hbox (15.11649pt too wide) in paragraph at lines 242--243
-[]\OT1/cmr/m/n/10 from the noise fig-ure, the MDS can be cal-cu-lated: $\OML/cm
-m/m/it/10 MDS\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 dBm\OT1/cmr/m/n/10 ) = \OMS/cmsy
-/m/n/10 ^^@\OT1/cmr/m/n/10 174\OML/cmm/m/it/10 dBm \OT1/cmr/m/n/10 +
+ [13] [14] [15]
+Package epstopdf Info: Source file: <Illustrations/NFSetup.eps>
+(epstopdf)                    date: 2014-11-23 11:46:42
+(epstopdf)                    size: 49910 bytes
+(epstopdf)             Output file: <Illustrations/NFSetup-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2014-11-23 11:48:03
+(epstopdf)                    size: 15885 bytes
+(epstopdf)             Command: <repstopdf --outfile=Illustrations/NFSetup-eps-
+converted-to.pdf Illustrations/NFSetup.eps>
+(epstopdf)             \includegraphics on input line 202.
+Package epstopdf Info: Output file is already uptodate.
+
+<Illustrations/NFSetup-eps-converted-to.pdf, id=222, 232.87pt x 114.4275pt>
+File: Illustrations/NFSetup-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Illustrations/NFSetup-eps-converted-to.pdf>
+Package pdftex.def Info: Illustrations/NFSetup-eps-converted-to.pdf used on inp
+ut line 202.
+(pdftex.def)             Requested size: 232.86942pt x 114.42722pt.
+ [16 <./Illustrations/NFSetup-eps-converted-to.pdf>] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
+
  []
 
-[17] [18]
+
+Overfull \hbox (15.4498pt too wide) in paragraph at lines 242--243
+[]\OT1/cmr/m/n/10 The MDS can be cal-cu-lated from the noise fig-ure: $\OML/cmm
+/m/it/10 MDS\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 dBm\OT1/cmr/m/n/10 ) = \OMS/cmsy/
+m/n/10 ^^@\OT1/cmr/m/n/10 174\OML/cmm/m/it/10 dBm \OT1/cmr/m/n/10 +
+ []
+
+[18]
 Chapter 5.
 
 Overfull \hbox (4.03122pt too wide) in paragraph at lines 251--251
@@ -660,24 +685,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
  (./RadioMeasurementsForTheAmateur.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
-
-
-Package rerunfilecheck Warning: File `RadioMeasurementsForTheAmateur.out' has c
-hanged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RadioMeasurementsForTheAmateur.out'
-:
-(rerunfilecheck)             Before: AC166112B86C6A4A05AE9344EE37FE82;1796
-(rerunfilecheck)             After:  EAF11054E26008A17ACED5D4FFA3466E;1796.
+Package rerunfilecheck Info: File `RadioMeasurementsForTheAmateur.out' has not 
+changed.
+(rerunfilecheck)             Checksum: EAF11054E26008A17ACED5D4FFA3466E;1796.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 377.
  ) 
 Here is how much of TeX's memory you used:
- 6351 strings out of 493304
- 90242 string characters out of 6139870
+ 6356 strings out of 493304
+ 90443 string characters out of 6139870
  174597 words of memory out of 5000000
- 9586 multiletter control sequences out of 15000+600000
+ 9590 multiletter control sequences out of 15000+600000
  9584 words of font info for 36 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,6n,28p,622b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -695,10 +712,10 @@ sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on RadioMeasurementsForTheAmateur.pdf (25 pages, 224090 bytes).
+Output written on RadioMeasurementsForTheAmateur.pdf (25 pages, 237541 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
+ 398 PDF objects out of 1000 (max. 8388607)
+ 346 compressed objects within 4 object streams
  124 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
