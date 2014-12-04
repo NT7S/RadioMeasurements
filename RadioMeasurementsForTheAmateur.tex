@@ -240,7 +240,7 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 	\vspace{30pt}
 	\\AF Noise + Image rejection power level $\rule{3cm}{0.1mm}$ 
 
-	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your IF rejection power level in dBm.
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your Image rejection power level in dBm.
 	\vspace{30pt}
 	\\Image rejection power: $\rule{3cm}{0.1mm}$ dBm.
 	 
@@ -260,7 +260,8 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 \newpage
 
 \section{Opposite Sideband Rejection}
-blah
+The purpose of this test is to measure the level a CW signal on the frequency that makes the oposite sideband in the receiver.
+This is defined as a signal on the Image frequency at the receiver antenna port which produces the same amount of AF power output as the intrinsic background noise of the receiver.  For this procedure to work its important to have preformed the MDS measurement as outlined earlier in this document or the noise figure measurement.
 \subsection*{Overview method 1}
 %things
 \subsection*{Equipment List}
@@ -302,11 +303,32 @@ blah
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item  
+	\item Calculate the center frequency of the Oposite Sideband. This should be the frequency that the receiver is tuned to subtracted from the CW tone picth if the receiver is for LSB and subtracted for USB.
+	\vspace{30pt}
+	\\Oposite Sideband Frequency $\rule{3cm}{0.1mm}$ MHz.
+
+	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading.
+	\vspace{30pt}
+	\\AF noise power $\rule{3cm}{0.1mm}$ 
+
+	\item  The oposite sideband power level will be the AF power level 3 dB higher than the measurement made in step 2. Calculate it below.
+	\vspace{30pt}
+	\\AF Noise + Image rejection power level $\rule{3cm}{0.1mm}$ 
+
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your Oposite sideband rejection power level in dBm.
+	\vspace{30pt}
+	\\Oposite Sideband rejection power: $\rule{3cm}{0.1mm}$ dBm.
+	 
+	\item  The total oposite sideband rejection is now calculated by subtracting the Oposite Sideband rejection power level from the MDS of the receiver.
+	\vspace{30pt}
+	 \\Oposite sideband rejection: $\rule{3cm}{0.1mm}$ dB.
+
+	\emph{For example, if your signal generator is set to 0 dBm and the step attenuator is set to 16 dB, then your IF rejection power level is -16dBm. With an receiver MDS of -131dBm the IF rejection will then be: -16dbm -(-131dBm)=115dB.}
 \end{enumerate}
 
 \subsection*{Hints and Tips}
 \begin{itemize}
+	\item This test requires that both the receiver and signal generator are frequency stable and that the phase noise are low.
 	\item Many QRP receivers and transceivers have a relatively low-level audio output, designed for either headphones-only or for a small speaker. In order to make the most accurate measurement, you may need to turn the AF gain control to maximum.
 	\item If the noise vary to much for your readings to be stable, a low pass integrating filter will smooth out the noise and give a stable reading. A suitable filter is a resistor of 10 k in series with the signal lead and a 1 $\mu$F capacitor, if the noise vary to much increase the capacitor to 10 $\mu$F.  
 	
