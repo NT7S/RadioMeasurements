@@ -161,7 +161,7 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 	\vspace{30pt}
 	\\AF noise power $\rule{3cm}{0.1mm}$ 
 
-	\item 4. The IF rejection power level will be the AF power level 3 dB higher than the measurement made in step 4. Calculate it below.
+	\item  The IF rejection power level will be the AF power level 3 dB higher than the measurement made in step 4. Calculate it below.
 	\vspace{30pt}
 	\\AF Noise + IF rejection power level $\rule{3cm}{0.1mm}$ 
 
@@ -169,7 +169,7 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 	\vspace{30pt}
 	\\IF rejection power: $\rule{3cm}{0.1mm}$ dBm.
 	 
-	\item 6. The total IF rejection is now calculated by subtracting the IF rejection power level from the MDS of the receiver.
+	\item  The total IF rejection is now calculated by subtracting the IF rejection power level from the MDS of the receiver.
 	\vspace{30pt}
 	 \\IF rejection: $\rule{3cm}{0.1mm}$ dB.
 
@@ -185,7 +185,8 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 \newpage
 
 \section{Image Rejection}
-% this depeends opon what equipment are avaible and what component to be measured, could be its own chapter.
+The purpose of this test is to measure the level a CW signal on the frequency that are the same distance from the IF as the wanted signal, but in the oposite direction. 
+This is defined as a signal on the Image frequency at the receiver antenna port which produces the same amount of AF power output as the intrinsic background noise of the receiver.  For this procedure to work its important to have preformed the MDS measurement as outlined earlier in this document or the noise figure measurement.
 \subsection*{Overview method 1}
 %things
 \subsection*{Equipment List}
@@ -212,25 +213,54 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 \subsubsection*{Connections}
 \emph{Make sure all equipment is powered off before making any connections.}
 \begin{itemize}
-	\item
+	\item Connect the signal generator output to one port of the step attenuator using a 50 $\Omega$ jumper cable.
+	\item Connect the other port of the step attenuator to the DUT (receiver) using a 50 $\Omega$ jumper cable.
+	\item Connect the audio output of the DUT (receiver) to the AF amplifier or 8 $\Omega$ load using an audio jumper cable.
+	\item Connect the AC RMS voltmeter probes to the properly loaded audio output of the DUT (receiver).
 \end{itemize}
 \subsubsection*{Presets}
 \begin{itemize}
-	\item
+	\item Turn ON the signal generator but make sure that the output is OFF. Set the output level to -30 dBm (if you are able to). Set the output frequency to the desired test frequency.
+	\item Set the step attenuator for -40 dB. This will give an initial test signal level of -70 dBm. If you are not able to set your signal generator to -50 dBm, set the step attenuator to give you -70 dBm of test signal output.
+	\item Turn ON the AF amplifier.
+	\item Turn ON the DUT (receiver) and set for the desired measurement band and frequency. Set the AF gain (volume) control fully-counterclockwise (no AF output), then set to an appropriate level for normal listening. If your receiver has AGC, disable it.
+	\item Turn ON the AC RMS voltmeter. Set the meter scale as necessary.
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item  
+	\item Calculate the image frequency. If the local oscilator is higher than the reciver frequency F: $  F_{IM} = F + 2 \cdot F_{IF}$ or if the local oscilator is lower than the reciver frequency F: $  F_{IM} = F - 2 \cdot F_{IF}$
+	\vspace{30pt}
+	\\Image Frequency $\rule{3cm}{0.1mm}$ MHz.
+
+	\item Note the reading of the AC RMS voltmeter in dB. If the meter reading is fluctuating quite a bit, you may need to increase the AF gain control of the DUT (receiver) in order to get a more stable reading.
+	\vspace{30pt}
+	\\AF noise power $\rule{3cm}{0.1mm}$ 
+
+	\item  The Image rejection power level will be the AF power level 3 dB higher than the measurement made in step 2. Calculate it below.
+	\vspace{30pt}
+	\\AF Noise + Image rejection power level $\rule{3cm}{0.1mm}$ 
+
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your IF rejection power level in dBm.
+	\vspace{30pt}
+	\\Image rejection power: $\rule{3cm}{0.1mm}$ dBm.
+	 
+	\item  The total IF rejection is now calculated by subtracting the IF rejection power level from the MDS of the receiver.
+	\vspace{30pt}
+	 \\Iimage rejection: $\rule{3cm}{0.1mm}$ dB.
+
+	\emph{For example, if your signal generator is set to -30 dBm and the step attenuator is set to 6 dB, then your IF rejection power level is -36dBm. With an receiver MDS of -131dBm the IF rejection will then be: -36dbm -(-131dBm)=95dB.} 
 \end{enumerate}
 
 \subsection*{Hints and Tips}
 \begin{itemize}
-	\item
+	\item Many QRP receivers and transceivers have a relatively low-level audio output, designed for either headphones-only or for a small speaker. In order to make the most accurate measurement, you may need to turn the AF gain control to maximum.
+	\item If the noise vary to much for your readings to be stable, a low pass integrating filter will smooth out the noise and give a stable reading. A suitable filter is a resistor of 10 k in series with the signal lead and a 1 $\mu$F capacitor, if the noise vary to much increase the capacitor to 10 $\mu$F.  
+	
 \end{itemize}
 \newpage
 
 \section{Opposite Sideband Rejection}
-% this depeends opon what equipment are avaible and what component to be measured, could be its own chapter.
+blah
 \subsection*{Overview method 1}
 %things
 \subsection*{Equipment List}
@@ -257,11 +287,18 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 \subsubsection*{Connections}
 \emph{Make sure all equipment is powered off before making any connections.}
 \begin{itemize}
-	\item
+	\item Connect the signal generator output to one port of the step attenuator using a 50 $\Omega$ jumper cable.
+	\item Connect the other port of the step attenuator to the DUT (receiver) using a 50 $\Omega$ jumper cable.
+	\item Connect the audio output of the DUT (receiver) to the AF amplifier or 8 $\Omega$ load using an audio jumper cable.
+	\item Connect the AC RMS voltmeter probes to the properly loaded audio output of the DUT (receiver).
 \end{itemize}
 \subsubsection*{Presets}
 \begin{itemize}
-	\item
+	\item Turn ON the signal generator but make sure that the output is OFF. Set the output level to -30 dBm (if you are able to). Set the output frequency to the desired test frequency.
+	\item Set the step attenuator for -40 dB. This will give an initial test signal level of -70 dBm. If you are not able to set your signal generator to -50 dBm, set the step attenuator to give you -70 dBm of test signal output.
+	\item Turn ON the AF amplifier.
+	\item Turn ON the DUT (receiver) and set for the desired measurement band and frequency. Set the AF gain (volume) control fully-counterclockwise (no AF output), then set to an appropriate level for normal listening. If your receiver has AGC, disable it.
+	\item Turn ON the AC RMS voltmeter. Set the meter scale as necessary.
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
@@ -270,7 +307,9 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 
 \subsection*{Hints and Tips}
 \begin{itemize}
-	\item
+	\item Many QRP receivers and transceivers have a relatively low-level audio output, designed for either headphones-only or for a small speaker. In order to make the most accurate measurement, you may need to turn the AF gain control to maximum.
+	\item If the noise vary to much for your readings to be stable, a low pass integrating filter will smooth out the noise and give a stable reading. A suitable filter is a resistor of 10 k in series with the signal lead and a 1 $\mu$F capacitor, if the noise vary to much increase the capacitor to 10 $\mu$F.  
+	
 \end{itemize}
 \newpage
 
