@@ -10,18 +10,19 @@
 \BOOKMARK [1][-]{section.4.6}{Blocking Gain Compression}{chapter.4}% 10
 \BOOKMARK [1][-]{section.4.7}{Noise Figure}{chapter.4}% 11
 \BOOKMARK [1][-]{section.4.8}{Audio Frequency Response}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.9}{Audio Power Output}{chapter.4}% 13
-\BOOKMARK [0][-]{chapter.5}{Transmitter Measurements}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Transmitter Power Output}{chapter.5}% 15
-\BOOKMARK [1][-]{section.5.2}{Transmitter Spectral Purity}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.3}{Transmitter Carrier and Unwanted Sideband Suppression}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.4}{Transmitter Two-Tone Intermodulation Distortion \(IMD\)}{chapter.5}% 18
-\BOOKMARK [1][-]{section.5.5}{Transmitter CW Keying Waveform}{chapter.5}% 19
-\BOOKMARK [0][-]{chapter.6}{Components and Circuits}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Crystal Parameters}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Third-Order Intercept}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Noise Figure}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.4}{Resonator Q}{chapter.6}% 24
-\BOOKMARK [0][-]{chapter.7}{DIY Test Equipment}{}% 25
-\BOOKMARK [1][-]{section.7.1}{Crystal Measurement Jig}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.2}{Noise Figure stuff}{chapter.7}% 27
+\BOOKMARK [1][-]{section.4.9}{Audio Distortion}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.10}{Audio Power Output}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Transmitter Measurements}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Transmitter Power Output}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Transmitter Spectral Purity}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{Transmitter Carrier and Unwanted Sideband Suppression}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.4}{Transmitter Two-Tone Intermodulation Distortion \(IMD\)}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.5}{Transmitter CW Keying Waveform}{chapter.5}% 20
+\BOOKMARK [0][-]{chapter.6}{Components and Circuits}{}% 21
+\BOOKMARK [1][-]{section.6.1}{Crystal Parameters}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.2}{Third-Order Intercept}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.3}{Noise Figure}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.4}{Resonator Q}{chapter.6}% 25
+\BOOKMARK [0][-]{chapter.7}{DIY Test Equipment}{}% 26
+\BOOKMARK [1][-]{section.7.1}{Crystal Measurement Jig}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.2}{Noise Figure stuff}{chapter.7}% 28
