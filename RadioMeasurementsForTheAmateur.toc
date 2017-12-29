@@ -1,0 +1,40 @@
+\contentsline {section}{Unnumbered Section}{4}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Glossary}{7}{chapter.2}
+\contentsline {chapter}{\numberline {3}Test Equipment}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}DC measurements}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Audio measurements}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Receiver measurements}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Transmitter measurements}{10}{section.3.4}
+\contentsline {chapter}{\numberline {4}Receiver Measurements}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Minimum Discernible Signal (MDS)}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}IF Rejection}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}Image Rejection}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}Opposite Sideband Rejection}{21}{section.4.4}
+\contentsline {section}{\numberline {4.5}Two-Tone Third Order Dynamic Range}{24}{section.4.5}
+\contentsline {section}{\numberline {4.6}Blocking Gain Compression}{24}{section.4.6}
+\contentsline {section}{\numberline {4.7}Noise Figure}{25}{section.4.7}
+\contentsline {section}{\numberline {4.8}Audio Frequency Response}{28}{section.4.8}
+\contentsline {section}{\numberline {4.9}Audio Distortion}{31}{section.4.9}
+\contentsline {section}{\numberline {4.10}Audio Power Output}{34}{section.4.10}
+\contentsline {chapter}{\numberline {5}Transmitter Measurements}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Transmitter Power Output}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Transmitter CW Keying Waveform}{35}{section.5.2}
+\contentsline {section}{\numberline {5.3}Transmitter Spectral Purity}{35}{section.5.3}
+\contentsline {section}{\numberline {5.4}Transmitter Carrier and Unwanted Sideband Suppression}{35}{section.5.4}
+\contentsline {section}{\numberline {5.5}Transmitter Two-Tone Intermodulation Distortion (IMD)}{35}{section.5.5}
+\contentsline {chapter}{\numberline {6}Components and Circuits}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Crystal Parameters}{38}{section.6.1}
+\contentsline {section}{\numberline {6.2}Third-Order Intercept}{41}{section.6.2}
+\contentsline {section}{\numberline {6.3}Noise Figure}{41}{section.6.3}
+\contentsline {section}{\numberline {6.4}Resonator Q}{42}{section.6.4}
+\contentsline {chapter}{\numberline {7}DIY Test Equipment}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Crystal Measurement Jig}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Noise sources}{43}{section.7.2}
+\contentsline {section}{\numberline {7.3}Distortion analyser notch filter}{44}{section.7.3}
+\contentsline {section}{\numberline {7.4}AF RMS power meter}{44}{section.7.4}
+\contentsline {section}{\numberline {7.5}2-tone generator}{44}{section.7.5}
+\contentsline {section}{\numberline {7.6}Keying generator}{44}{section.7.6}
+\contentsline {section}{\numberline {7.7}RF -40dB power sampler}{44}{section.7.7}
+\contentsline {section}{\numberline {7.8}Crystal test sources}{44}{section.7.8}
+\contentsline {section}{\numberline {7.9}Noise sources}{44}{section.7.9}
