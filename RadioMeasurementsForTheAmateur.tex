@@ -50,7 +50,8 @@ The most important measurements can be done using a true RMS audio voltmeter or 
 Measuring receivers are mostly related to signal sources and attenuators. A high impedance, high dynamic range audio amplifier with variable terminations and connections to other instruments should be a suitable project in order to test receivers. 
 Small and large signal sources can be built using crystal oscillators. Directional couplers, Wilkinson splitters and AGC test 
 \section{Transmitter measurements}
-Oscilloscope and spectrum analyser are best bought ready made, accessories like directional couplers, attenuators and dummyload can all be built with good preformance. 
+Oscilloscope and spectrum analyser are best bought ready made. Accessories like directional couplers, attenuators and dummyload can all be built with good performance. 
+For transmitter measurements, its important to use good quality coax cables. Most amateur cables have a fairly high amount of leakage, and can distort measurements.  
 \chapter{Receiver Measurements}
 \section{Minimum Discernible Signal (MDS)}
 \subsection*{Overview}
@@ -423,13 +424,22 @@ Noise figure measurement has the advantage of being independent from the bandwid
 \section{Audio Frequency Response}
 \section{Audio Distortion}
 \section{Audio Power Output}
-\chapter{Transmitter Measurements}
 
+
+\chapter{Transmitter Measurements}
+%
 \section{Transmitter Power Output}
-\section{Transmitter Spectral Purity}
-\section{Transmitter Carrier and Unwanted Sideband Suppression}
-\section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
+% could explain it using both oscilloscope and calibrated powermeter
 \section{Transmitter CW Keying Waveform}
+% This is where you use a scope again?
+\section{Transmitter Spectral Purity}
+%is there a method here that does not warrant the use of a spectrum analyzer?
+\section{Transmitter Carrier and Unwanted Sideband Suppression}
+% Food for SA
+\section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
+% SA food
+
+
 \chapter{Components and Circuits}
 
 \newpage
@@ -588,18 +598,27 @@ The projects described here are all suggestions. There are no step-by-step instr
 	\item Cut 2 traces in a PCB (or order it from OSHpark: \url{https://oshpark.com/shared_projects/Ert6eRmg})
 	\item  Fit 2 pieces of an IC socket to it so you keep the 50 ohm environment but it allows for measurement of crystals.
 	\item Use good sockets, gold-plated preferred.  
-	\item Adding some attenuators helps in providing a 50 ohm environement. A matched set of attenuators can be buildt on the PCB's by cutting traces, and adding SMD resistors. 6dB in each leg should help the impedance match if the generator or meter impedance is not close to 50 ohms
+	\item Adding some attenuators helps in providing a 50 ohm environment. A matched set of attenuators can be built on the PCB's by cutting traces, and adding SMD resistors. 6dB in each leg should help the impedance match if the generator or meter impedance is not close to 50 ohms
 \end{itemize}
 \section{Noise sources}
-The noise sources outlined here should be buildt using propper RF technique, and well screened. Output signal should be lead through the box using a good coax connector and feedthrough capacitor for DC. Running off a 9V battery is reccomended to avoid ground loop problems. 
+The noise sources outlined here should be built using proper RF technique, and well screened. Output signal should be lead through the box using a good coax connector and feed-through capacitor for DC. Running off a 9V battery is recommended to avoid ground loop problems. 
 \subsection*{RF Noise source}
-blah
+%blah
 \subsection*{Audio noise source}
+%more blah
 \section{Distortion analyser notch filter}
+%Could link to Ken Kuhn
 \section{AF RMS power meter}
+%the thermal one I suggested some time ago
 \section{2-tone generator}
+%got a schematic someplace...
 \section{Keying generator}
+%Arduino based
 \section{RF -40dB power sampler}
+% the one in the EMRFD article... Provide a photo and a reference to the article
+%alternative do a PCB?
 \section{Crystal test sources}
+% I did a blogpost, can be reproduced here.
 \section{Noise sources}
+%you gotta be kidding me....
 \end{document}
