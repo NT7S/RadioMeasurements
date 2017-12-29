@@ -339,6 +339,14 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 \newpage
 
 \section{Two-Tone Third Order Dynamic Range}
+\subsection*{Equipment List}
+\begin{itemize}
+	\item low distortion signal source (2 pcs spaced 20KHz).
+	\item Hybrid combiner or wilkinson divider for the frequency band of choise
+	\item AC RMS Voltmeter (preferably with dB scale)
+	\item AF Monitor Amplifier or 8 $\Omega$ Resistive Load (depends on speaker output impedance)
+\end{itemize}
+
 \section{Blocking Gain Compression}
 \newpage
 \section{Noise Figure}
@@ -563,12 +571,24 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 % here there are several metthods, we should probably describe them all, as not all are suitable for all components
 % the 50 ohm notch method is probably one of the simpler ones, the 3/6db method is probably more advanced
 \chapter{DIY Test Equipment}
+The projects described here are all suggestions. There are no step-by-step instructions on how to build these projects. Some projects may have kits available from Etherkit. All of the designs are open source.
 \section{Crystal Measurement Jig}
 \begin{itemize}
 	\item Cut 2 traces in a PCB (or order it from OSHpark: \url{https://oshpark.com/shared_projects/Ert6eRmg})
 	\item  Fit 2 pieces of an IC socket to it so you keep the 50 ohm environment but it allows for measurement of crystals.
 	\item Use good sockets, gold-plated preferred.  
+	\item Adding some attenuators helps in providing a 50 ohm environement. A matched set of attenuators can be buildt on the PCB's by cutting traces, and adding SMD resistors. 6dB in each leg should help the impedance match if the generator or meter impedance is not close to 50 ohms
 \end{itemize}
-\section{Noise Figure stuff}
+\section{Noise sources}
+The noise sources outlined here should be buildt using propper RF technique, and well screened. Output signal should be lead through the box using a good coax connector and feedthrough capacitor for DC. Running off a 9V battery is reccomended to avoid ground loop problems. 
+\subsection*{RF Noise source}
 blah
+\subsection*{Audio noise source}
+\section{Distortion analyser notch filter}
+\section{AF RMS power meter}
+\section{2-tone generator}
+\section{Keying generator}
+\section{RF -40dB power sampler}
+\section{Noise sources}
+\section{Noise sources}
 \end{document}
