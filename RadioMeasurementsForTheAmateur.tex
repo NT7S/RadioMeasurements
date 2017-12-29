@@ -39,6 +39,7 @@ DUT & Device Under Test \\
 RMS & Root-mean-square \\
 DMM & Digital Multimeter\\
 AGC & Automatic Gain control \\
+THD & Total Harmonic Distortion \\
 
 \end{tabular} 
 \chapter{Test Equipment}
@@ -494,7 +495,8 @@ Audio distortion in a receiver is a function of both distortion in IF and audio 
 \begin{itemize}
 	\item RF signal generator
 	\item Step attenuator
-	\item AF monitor 
+	\item AF monitor or 8$\Omega$ resistive load, depending on receiver.
+	\item Distortion meter or computer soundcard with proper software.
 \end{itemize}
 \subsection*{Test Setup}
 %\begin{figure}
@@ -504,25 +506,47 @@ Audio distortion in a receiver is a function of both distortion in IF and audio 
 \subsubsection*{Required Cabling}
 \begin{itemize}
 	\item 2 --- 50 $\Omega$ jumper cables \\
-		Usually BNC Male-to-BNC Male
+		Usually BNC Male-to-BNC Male, some adapters may be necessary
+		\item 2 --- Audio jumper cables \\
+		Varies depending on the connectors on your receiver and AF amplifier.
 \end{itemize}
 \subsubsection*{Connections}
 \emph{Make sure all equipment is powered off before making any connections.}
 \begin{itemize}
-	\item
+	\item Connect the output from the signal generator to the attenuator input using a 50 $\Omega$ jumper cable.
+	\item Connect the output from the attenuator to the input of the receiver using a 50 $\Omega$ jumper cable.
+	\item Connect the receiver output to the input of the monitor amplifier or load using a Audio jumper cable. 
+	\item Connect the output of the monitor amplifier or receiver load to the input of the distortion meter or computer sound-card.
 \end{itemize}
 \subsubsection*{Presets}
 \begin{itemize}
-	\item
+	\item Turn on the AF amplifier and distortion meter or start computer program. 
+	\item Turn on signal generator. Disable the output or increase the attenuator to max and let it heat up for 1 hr. Set the signal generator to the wanted test frequency. 
+	\item Turn on the receiver, enable AGC and select a narrow filter. Tune to the frequency of the test. Set the AF control to a appropriate level for normal listening. Observe that some distortion meters require the test tone to be at a given, fixed frequency usually near 1KHz.
+	\item Tune the receiver so that the tone is at a normal pitch (600Hz).
+	\item Set the signal generator output level after the attenuator to a S5 level (-97dBm). 
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item  
+	\item Measure the output total amplitude without enabling the distortion meter notch, and note the amplitude:
+	\vspace{30pt}
+	\\Output amplitude $\rule{3cm}{0.1mm}$ V. \vspace{30pt}
+	\item Enable the notch and adjust to minimum deflection either by adjusting the notch frequency or by tuning the receiver to minimum output. note the amplitude:
+	\vspace{30pt}
+	\\notched amplitude $\rule{3cm}{0.1mm}$ V. \vspace{30pt}
+	\item Calculate the total distortion in $%$ by:
+	$ THD{\%} = \frac{Notched amplitude}{output amplitude} \cdot 100\% $$
+	\vspace{30pt}
+	\\Total audio distortion $\rule{3cm}{0.1mm}$ \%. \vspace{30pt}
+
 \end{enumerate}
 
 \subsection*{Hints and Tips}
 \begin{itemize}
-	\item
+	\item This measurement can give different results with different signal levels and audio levels. The receiver noise will give high readings due to its random nature. 
+	\item This measurements should be preformed with all the different filter alternatives in the receiver. 
+	\item Most distortion analysers preform the calculations outlined automatic and the total distortion can be read off a meter. Consult your distortion meter manual.
+	\item If this measurement are to be done with the AGC off, make sure to reduce the IF gain or reducing the input signal to avoid overloading the receiver.
 \end{itemize}
 
 \newpage
