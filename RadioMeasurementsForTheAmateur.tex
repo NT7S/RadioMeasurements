@@ -38,6 +38,8 @@ CW & Continuous Wave, i.e. a single tone \\
 DUT & Device Under Test \\
 RMS & Root-mean-square \\
 DMM & Digital Multimeter\\
+AGC & Automatic Gain control \\
+
 \end{tabular} 
 \chapter{Test Equipment}
 Some instruments are necessary in order to preform the measurements outlined in this document. While some can be homebrewed, and some projects are provided, the experimenter may need to get some new or surplus instruments. In the following sections we will discuss some of the basic needed instruments, and give some hints in selection.
@@ -412,7 +414,7 @@ Noise figure measurement has the advantage of being independent from the bandwid
 	\vspace{30pt}
 	\\Y: $\rule{3cm}{0.1mm}$ 
 	\item For the noise figure calculations, the calculation is different if the measurements are done in dB or in Volt. This is due to how multiplications are done with logarithms.
-	\item for mV:  $ f = \dfrac{ENR}{Y-1} $ usualy we give noise figure in dB: $ NF = 20 \cdot \log(f) $
+	\item for mV:  $ f = \dfrac{ENR}{Y-1} $ usually we give noise figure in dB: $ NF = 20 \cdot \log(f) $
 	\item For the noise figure calculation in dB the noise figure is: $NF(dB) =  ENR(dB) - Y(dB) $
 	\vspace{30pt}
 	 \\NF: $\rule{3cm}{0.1mm}$  dB
@@ -421,10 +423,146 @@ Noise figure measurement has the advantage of being independent from the bandwid
 	 \\MDS: $\rule{3cm}{0.1mm}$ dBm
 \end{enumerate}
 
+\newpage
 \section{Audio Frequency Response}
-\section{Audio Distortion}
-\section{Audio Power Output}
+\subsection*{Overview}
+Audio frequency response of a receiver is how the receiver shapes the output audio. This is a important measurement to determine if the baseband and BFO is adjusted correctly. The audio frequency response is measured using white noise instead of a audio signal.  
+\subsection*{Equipment List}
+\begin{itemize}
+	\item RF white noise source
+	\item step attenuator 
+	\item AF monitor amplifier or 8$\Omega$ resistive load, depending on receiver. 
+	\item Audio spectrum analyser or sound-card with spectrum analyser program.
+\end{itemize}
+\subsection*{Test Setup}
+%\begin{figure}
+%\includegraphics[scale=1]{Illustrations/noisefigure}
+%\caption{Noise figure Setup}
+%\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+	\item  2 --- audio jumper cables \\
+		Varies depending on the connectors on your receiver and AF amplifier or load.
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+	\item Connect the noise source to the input of the attenuator using a 50$\Omega$ jumper cable.
+	\item Connect the output of the attenuator to the input of the receiver using a 50$\Omega$ jumper cable.
+	\item Connect the receiver output, to the input of the monitor amplifier or load using a audio jumper cable.
+	\item Connect the output from the monitor amplifier or load to audio spectrum analyser or computer sound-card.
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+	\item Turn on the AF amplifier.
+	\item Turn on the Audio spectrum analyser, or start computer program and select a bandwidth of 100Hz to 5KHz, Select a proper sample rate and linear frequency. Select dB scale (logarithmic) display. 
+	\item Turn on the DUT (receiver) and set for desired measurement band and frequency. set the AF gain (volume) control to a appropriate level for normal listening. If your receiver has AGC, disable it. Put markers at the knee frequencies of your filter. For SSB this is usually 300Hz and 3000Hz.
+	\item Set the variable attenuator at 0dB.
+	\item 
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+	\item  Turn on the RF white noise source. The noise level in the receiver should increase. 
+	\item In the spectrum analyser window, the bandwith of the filter should be visible. Adjust the RF attenuator so that the input noise level does not damage the receiver, and keep the IF amplifier in their linear range. There should be only random noise visible on the spectrum analyser.
+	\item Adjust the audio volume so that the spectrum analyzer shows a 20dB-40dB range between the noise output and the base noise (the RF noise generator turned off)
+	\item The filter frequencies should be centred on your wanted frequency and ideally mirrored around the center.  If not, then this may be a proper place to adjust the BFO frequency and re-visit. 
+	\vspace{30pt}
+	\\Upper Frequency $\rule{3cm}{0.1mm}$ Hz. \vspace{30pt}
+	\\Lower Frequency $\rule{3cm}{0.1mm}$ Hz. \vspace{30pt}
+	\\Filter Bandwith $\rule{3cm}{0.1mm}$ Hz.
+	\item Enable averaging and set the averaging count on the spectrum analyser to a suitable level(50 measurements). Let it run for a while to get data.  Store the filter screen plot for further analysis.
+	\item Repeat point 3-5 for each filter in the receiver.
+	
+\end{enumerate}
 
+\subsection*{Hints and Tips}
+\begin{itemize}
+	\item Due to the power distribution of regular audio, the receiver should ideally have a slight upward slope with frequency, while transmitters should have a slight downward slope. This can usually be realized with a RC filter in the audio section.
+	\item Most crystal filters have in-band ripple, making the  measurement difficult to interpret.  
+	\item using this setup to adjust the BFO to proper frequency should make the BFO adjustment easy to do. 
+	\item %here there should be a example plot
+\end{itemize}
+
+\newpage
+\section{Audio Distortion}
+% 
+\subsection*{Overview }
+Audio distortion in a receiver is a function of both distortion in IF and audio amplifiers and in mixers. As such this measurement may be difficult to preform. 
+\subsection*{Equipment List}
+\begin{itemize}
+	\item RF signal generator
+	\item Step attenuator
+	\item AF monitor 
+\end{itemize}
+\subsection*{Test Setup}
+%\begin{figure}
+%\includegraphics[scale=1]{Illustrations/noisefigure}
+%\caption{Noise figure Setup}
+%\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+	\item  
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+	\item
+\end{itemize}
+
+\newpage
+\section{Audio Power Output}
+% this depeends opon what equipment are avaible and what component to be measured, could be its own chapter.
+\subsection*{Overview}
+%things
+\subsection*{Equipment List}
+\begin{itemize}
+	\item items
+\end{itemize}
+\subsection*{Test Setup}
+%\begin{figure}
+%\includegraphics[scale=1]{Illustrations/noisefigure}
+%\caption{Noise figure Setup}
+%\end{figure}
+\subsubsection*{Required Cabling}
+\begin{itemize}
+	\item 2 --- 50 $\Omega$ jumper cables \\
+		Usually BNC Male-to-BNC Male
+\end{itemize}
+\subsubsection*{Connections}
+\emph{Make sure all equipment is powered off before making any connections.}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsubsection*{Presets}
+\begin{itemize}
+	\item
+\end{itemize}
+\subsection*{Test Procedure}
+\begin{enumerate}
+	\item  
+\end{enumerate}
+
+\subsection*{Hints and Tips}
+\begin{itemize}
+	\item
+\end{itemize}
+\newpage
 
 \chapter{Transmitter Measurements}
 %
