@@ -8,6 +8,9 @@
 \usepackage{hyperref}
 \author{Jason Milldrum, NT7S.} %LaTeX don't like several authors afaik.
 
+\hyphenation{Sup-pres-sion}
+\hyphenation{In-ter-mod-ula-tion}
+
 
 \title{Radio Measurements For The Amateur}
 
@@ -43,21 +46,21 @@ DUT & Device Under Test \\
 RMS & Root-mean-square \\
 DMM & Digital Multimeter\\
 AGC & Automatic Gain control \\
-THD & Total Harmonic Distortion \\
-
+THD & Total Harmonic Distortion
 \end{tabular} 
+
 \chapter{Test Equipment}
-Some instruments are necessary in order to preform the measurements outlined in this document. While some can be homebrewed, and some projects are provided, the experimenter may need to get some new or surplus instruments. In the following sections we will discuss some of the basic needed instruments, and give some hints in selection.
+Some instruments are necessary in order to perform the measurements outlined in this document. While some can be homebrewed, and some projects are provided, the experimenter may need to get some new or surplus instruments. In the following sections we will discuss some of the basic needed instruments, and give some hints in selection.
 \section{DC measurements}
-For the basic DC measurements, a good quality Digital Multimeter (DMM) would satisfy most of the measurements. For measuring current on a high power transmitter, a shunt resistor of known value may be obtained, and the current measured as voltage drop over this. Several 0.003$\omega$ shunts are available new for reasonable prices. 
+For the basic DC measurements, a good quality Digital Multimeter (DMM) would satisfy most of the measurements. For measuring current on a high power transmitter, a shunt resistor of known value may be obtained, and the current measured as voltage drop over this. Several 0.003$\Omega$ shunts are available new for reasonable prices. 
 \section{Audio measurements}
-The most important measurements can be done using a true RMS audio voltmeter or a thermal converting meter. In addition a suitable computer soundcard with proper audio spectrum analyser software can do all of the measurements outlined. Programs are available for soundcard distortion meters, power meter and spectrum analyser. Spectrum Lab by DL4YHF is a large suite of programs suited to doing audio measurements. % Should perhaps write a longer thing on spectrum lab? A appendix perhaps
-2-tone audio generators can be built with low distortion, and used to test other audio instruments.
+The most important measurements can be done using a true RMS audio voltmeter or a thermal converting meter. In addition a suitable computer soundcard with proper audio spectrum analyzer software can do all of the measurements outlined. Programs are available for soundcard distortion meters, power meter and spectrum analyser. Spectrum Lab by DL4YHF is a large suite of programs suited to doing audio measurements. % Should perhaps write a longer thing on spectrum lab? A appendix perhaps
+Two-tone audio generators can be built with low distortion, and used to test other audio instruments.
 \section{Receiver measurements}
 Measuring receivers are mostly related to signal sources and attenuators. A high impedance, high dynamic range audio amplifier with variable terminations and connections to other instruments should be a suitable project in order to test receivers. 
-Small and large signal sources can be built using crystal oscillators. Directional couplers, Wilkinson splitters and AGC test 
+Small and large signal sources can be built using crystal oscillators. Directional couplers, Wilkinson splitters and AGC test % Was this cut off in the middle of a thought?
 \section{Transmitter measurements}
-Oscilloscope and spectrum analyser are best bought ready made. Accessories like directional couplers, attenuators and dummyload can all be built with good performance. 
+Oscilloscopes and spectrum analyzers are best bought ready made. Accessories like directional couplers, attenuators and dummy loads can all be built with good performance. 
 For transmitter measurements, its important to use good quality coax cables. Most amateur cables have a fairly high amount of leakage, and can distort measurements.  
 \chapter{Receiver Measurements}
 \section{Minimum Discernible Signal (MDS)}
@@ -598,10 +601,13 @@ Audio distortion in a receiver is a function of both distortion in IF and audio 
 % could explain it using both oscilloscope and calibrated powermeter
 \section{Transmitter CW Keying Waveform}
 % This is where you use a scope again?
+
 \section{Transmitter Spectral Purity}
 %is there a method here that does not warrant the use of a spectrum analyzer?
+
 \section{Transmitter Carrier and Unwanted Sideband Suppression}
 % Food for SA
+
 \section{Transmitter Two-Tone Intermodulation Distortion (IMD)}
 % SA food
 
@@ -649,13 +655,15 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item Measure the parasitic package capacitance of the crystal. This should be done on a frequency far away from the crystal frequency, most meters measure this in the 100 kHz range. 
-	\item  measure series resonance freq in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency $F_{s}$.
+	\item Measure the parasitic package capacitance of the crystal. This should be done on a frequency far away from the crystal frequency, most meters measure this in the 100 kHz range.
+	
+	\item Measure series resonance frequency in series jig by inserting the crystal and finding the frequency where the amplitude read on the meter is max. This frequency is your series frequency $F_{s}$.
 	\vspace{30pt}
 	\\$F_{s}$: $\rule{3cm}{0.1mm}$ Hz.
 	
 %\item remove the crystal and insert an 100$\Omega$ trim potentiometer. Adjust this to the same amplitude level as measured for the series connection. Remove the potentiometer and use an ohm meter to measure the resistance. This is your R_{S} resistance.\vspace{30pt} \vspace{30pt} \vspace{30pt}
-\item Note the amplitude of the meter. This amplitude is proportional to the internal resistance in your crystal. Calculate the dB loss, this should be a negative value.: $ dB = crystal loss (dB) - reference level (dB) $\\
+	\item Note the amplitude of the meter. This amplitude is proportional to the internal resistance in your crystal. Calculate the dB loss, this should be a negative value.\\
+$ dB = crystal loss (dB) - reference level (dB) $
 	\item Calculate the internal resistance of the crystal: $ R_{s} = 100\cdot((10^{\frac{dB}{20}})^{-1}-1) $
 	\vspace{30pt}
 	\\$R_{s}$: $\rule{3cm}{0.1mm}$ $\Omega$. 
