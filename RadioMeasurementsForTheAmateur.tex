@@ -205,7 +205,7 @@ The purpose of this test is to measure the level a CW signal on the IF frequency
 \newpage
 
 \section{Image Rejection}
-The purpose of this test is to measure the level a CW signal on the frequency that are the same distance from the IF as the wanted signal, but in the oposite direction. 
+The purpose of this test is to measure the level a CW signal on the frequency that are the same distance from the IF as the wanted signal, but in the opposite direction. 
 This is defined as a signal on the Image frequency at the receiver antenna port which produces the same amount of AF power output as the intrinsic background noise of the receiver.  For this procedure to work its important to have preformed the MDS measurement as outlined earlier in this document or the noise figure measurement.
 \subsection*{Overview method 1}
 %things
@@ -281,7 +281,7 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 \newpage
 
 \section{Opposite Sideband Rejection}
-The purpose of this test is to measure the level a CW signal on the frequency that makes the oposite sideband in the receiver.
+The purpose of this test is to measure the level a CW signal on the frequency that makes the opposite sideband in the receiver.
 This is defined as a signal on the Image frequency at the receiver antenna port which produces the same amount of AF power output as the intrinsic background noise of the receiver.  For this procedure to work its important to have preformed the MDS measurement as outlined earlier in this document or the noise figure measurement.
 \subsection*{Overview method 1}
 %things
@@ -325,7 +325,7 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 \end{itemize}
 \subsection*{Test Procedure}
 \begin{enumerate}
-	\item Calculate the center frequency of the Oposite Sideband. This should be the frequency that the receiver is tuned to subtracted from the CW tone picth if the receiver is for LSB and subtracted for USB.
+	\item Calculate the center frequency of the opposite Sideband. This should be the frequency that the receiver is tuned to subtracted from the CW tone picth if the receiver is for LSB and subtracted for USB.
 	\vspace{30pt}
 	\\Oposite Sideband Frequency $\rule{3cm}{0.1mm}$ MHz.
 
@@ -333,17 +333,17 @@ This is defined as a signal on the Image frequency at the receiver antenna port 
 	\vspace{30pt}
 	\\AF noise power $\rule{3cm}{0.1mm}$ 
 
-	\item  The oposite sideband power level will be the AF power level 3 dB higher than the measurement made in step 2. Calculate it below.
+	\item  The opposite sideband power level will be the AF power level 3 dB higher than the measurement made in step 2. Calculate it below.
 	\vspace{30pt}
 	\\AF Noise + Image rejection power level $\rule{3cm}{0.1mm}$ 
 
-	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your Oposite sideband rejection power level in dBm.
+	\item Turn ON the signal generator output. The reading from the AC RMS voltmeter should be significantly higher than the calculated level in step 4 . Use the controls on the step attenuator to step down the test signal level until you have a reading on the AC RMS voltmeter that is closest to the figure derived in step 4. Note the amount of attenuation set on the step attenuator, then subtract that from the output level of the signal generator. This is your Opposite sideband rejection power level in dBm.
 	\vspace{30pt}
-	\\Oposite Sideband rejection power: $\rule{3cm}{0.1mm}$ dBm.
+	\\Opposite Sideband rejection power: $\rule{3cm}{0.1mm}$ dBm.
 	 
-	\item  The total oposite sideband rejection is now calculated by subtracting the Oposite Sideband rejection power level from the MDS of the receiver.
+	\item  The total opposite sideband rejection is now calculated by subtracting the Opposite Sideband rejection power level from the MDS of the receiver.
 	\vspace{30pt}
-	 \\Oposite sideband rejection: $\rule{3cm}{0.1mm}$ dB.
+	 \\Opposite sideband rejection: $\rule{3cm}{0.1mm}$ dB.
 
 	\emph{For example, if your signal generator is set to 0 dBm and the step attenuator is set to 16 dB, then your IF rejection power level is -16dBm. With an receiver MDS of -131dBm the IF rejection will then be: -16dbm -(-131dBm)=115dB.}
 \end{enumerate}
@@ -752,7 +752,7 @@ This method of measuring crystal parameters utilize the fact that a crystal have
 \begin{itemize}
 	\item
 \end{itemize}
-
+\newpage
 
 \section{Resonator Q}
 % here there are several metthods, we should probably describe them all, as not all are suitable for all components
@@ -766,6 +766,7 @@ The projects described here are all suggestions. There are no step-by-step instr
 	\item Use good sockets, gold-plated preferred.  
 	\item Adding some attenuators helps in providing a 50 ohm environment. A matched set of attenuators can be built on the PCB's by cutting traces, and adding SMD resistors. 6dB in each leg should help the impedance match if the generator or meter impedance is not close to 50 ohms
 \end{itemize}
+
 \section{Noise sources}
 The noise sources outlined here should be built using proper RF technique, and well screened. Output signal should be lead through the box using a good coax connector and feed-through capacitor for DC. Running off a 9V battery is recommended to avoid ground loop problems. 
 \subsection*{RF Noise source}
